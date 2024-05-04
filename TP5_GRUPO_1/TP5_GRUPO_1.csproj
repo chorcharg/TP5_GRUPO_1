@@ -68,10 +68,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="Agregar.aspx" />
+    <Content Include="listar.aspx" />
+    <Content Include="Eliminar.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SucursalesBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Agregar.aspx.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar.aspx.designer.cs">
+      <DependentUpon>Agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listar.aspx.cs">
+      <DependentUpon>listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listar.aspx.designer.cs">
+      <DependentUpon>listar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar.aspx.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar.aspx.designer.cs">
+      <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
