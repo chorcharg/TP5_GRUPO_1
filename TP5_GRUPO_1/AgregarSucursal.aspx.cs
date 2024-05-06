@@ -15,9 +15,18 @@ namespace TP5_GRUPO_1
         private  string consultaSql;
         private int FilasActualizadas;
         private Conexion conexion = new Conexion();
+        private DataSet setDatos;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+
+            if (!IsPostBack)
+            {
+                // Cargar Id_ProvinciaSucursal
+                CargarProvincias();
+                // Agregar la opción "--Seleccionar Provincia--"
+                DdlProvincia.Items.Insert(0, new ListItem("--Seleccionar Provincia--", ""));
+            }
         }
 
         protected void LbAgregarSuc_Click(object sender, EventArgs e)
@@ -35,6 +44,23 @@ namespace TP5_GRUPO_1
 
             // Ejecutar la consulta
             FilasActualizadas = conexion.EjecutarConexion(sqlCommand);
+        }
+        private void CargarProvincias()
+        {
+            string consultaSql = "SELECT DISTINCT Id_ProvinciaSucursal FROM Sucursal";
+
+            SqlConnection sqlConnection = new SqlConnection(CadenaConexion);
+            sqlConnection.Open();
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consultaSql, sqlConnection);
+            DataTable dtSucursal = new DataTable();
+            sqlDataAdapter.Fill(dtSucursal);
+
+            DdlProvincia.DataSource = dtSucursal;
+            DdlProvincia.DataValueField = "Id_ProvinciaSucursal";
+            DdlProvincia.DataBind();
+
+            sqlConnection.Close();
         }
     }    
  }
