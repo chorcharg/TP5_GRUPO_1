@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Data;
 
 namespace TP5_GRUPO_1
 {
@@ -15,6 +13,5 @@ namespace TP5_GRUPO_1
         {
 
         }
-
     }
 }
