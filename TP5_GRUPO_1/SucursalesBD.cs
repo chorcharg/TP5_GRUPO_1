@@ -20,9 +20,11 @@ namespace TP5_GRUPO_1
         }
 
         //EJEMPLO DE USO EjecutarABM, INCOMPLETO (hay que construir la query
-        public int agregarSucursal(string nombre, string descripcion, int idProvicia, string direccion)
+        public int agregarSucursal(string nombre, string descripcion, string idProvincia, string direccion)
         {
-            string query = "INSERT "  ;
+            string query = "INSERT INTO Sucursal " +
+                "(NombreSucursal,DescripcionSucursal,Id_ProvinciaSucursal,DireccionSucursal)" +
+                 "VALUES ('" + nombre + "','" + descripcion + "'," + idProvincia + ",'" + direccion + "');";  
 
 
             return EjecutarABM(query); //Esta devuelve un INT, por eso se puede usar en el return evitando crear una variable INT

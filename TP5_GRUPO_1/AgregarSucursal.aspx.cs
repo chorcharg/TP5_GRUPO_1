@@ -22,13 +22,35 @@ namespace TP5_GRUPO_1
             {
                 DataSet provincias = sucursalesDB.ConsultaProvincias("provincias");
                 
-                ddlProvinciaSuc.DataSource = provincias.Tables["provincias"];
-                ddlProvinciaSuc.DataTextField = "DescripcionProvincia";
-                ddlProvinciaSuc.DataValueField = "Id_Provincia";
-                ddlProvinciaSuc.DataBind();
-
+                foreach (DataRow provincia in provincias.Tables["provincias"].Rows)
+                {
+                    ddlProvinciaSuc.Items.Add(new ListItem(
+                        provincia["DescripcionProvincia"].ToString(),
+                        provincia["Id_Provincia"].ToString()
+                        )
+                       );
+                }
 
             }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            sucursalesDB.agregarSucursal(txtNombreSuc.Text,
+                                         txtDescripcionSuc.Text,
+                                         ddlProvinciaSuc.SelectedValue.ToString(),
+                                         txtDireccionSuc.Text
+                                         );
+            limpiarCampos();
+            
+        }
+
+
+        private void limpiarCampos()
+        {
+            txtNombreSuc.Text = string.Empty;
+            txtDescripcionSuc.Text = string.Empty;
+            txtDireccionSuc.Text = string.Empty;
         }
     }
 }

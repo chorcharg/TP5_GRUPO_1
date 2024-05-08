@@ -37,24 +37,9 @@
             height: 36px;
             width: 169px;
         }
-        .auto-style12 {
-            height: 23px;
-            width: 91px;
-        }
-        .auto-style13 {
-            width: 91px;
-        }
-        .auto-style14 {
-            height: 10px;
-            width: 91px;
-        }
-        .auto-style15 {
-            height: 36px;
-            width: 91px;
-        }
         .auto-style17 {
             height: 32px;
-            width: 91px;
+            width: 201px;
         }
         .auto-style18 {
             height: 23px;
@@ -82,10 +67,6 @@
         .auto-style25 {
             height: 21px;
             width: 169px;
-        }
-        .auto-style26 {
-            height: 21px;
-            width: 91px;
         }
         .auto-style27 {
             height: 21px;
@@ -140,26 +121,22 @@
         }
         .auto-style43 {
             height: 21px;
-            width: 27px;
+            width: 201px;
         }
         .auto-style44 {
             height: 23px;
-            width: 27px;
+            width: 201px;
         }
         .auto-style45 {
-            width: 27px;
+            width: 201px;
         }
         .auto-style46 {
             height: 10px;
-            width: 27px;
+            width: 201px;
         }
         .auto-style47 {
             height: 36px;
-            width: 27px;
-        }
-        .auto-style48 {
-            height: 32px;
-            width: 27px;
+            width: 201px;
         }
     </style>
 </head>
@@ -186,7 +163,7 @@
                     <td class="auto-style24"></td>
                     <td class="auto-style25"></td>
                     <td class="auto-style28"></td>
-                    <td class="auto-style26"></td>
+                    <td class="auto-style43"></td>
                     <td class="auto-style37"></td>
                     <td class="auto-style27"></td>
                     <td class="auto-style27"></td>
@@ -197,7 +174,7 @@
                     <td class="auto-style18"></td>
                     <td class="auto-style3"></td>
                     <td class="auto-style29">&nbsp;</td>
-                    <td class="auto-style12"></td>
+                    <td class="auto-style44"></td>
                     <td class="auto-style38">&nbsp;</td>
                     <td class="auto-style2"></td>
                     <td class="auto-style2"></td>
@@ -208,7 +185,7 @@
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4" style="font-size: xx-large; font-weight: bold;">GRUPO Nº</td>
                     <td class="auto-style36" style="font-size: xx-large; font-weight: bold;">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -219,7 +196,7 @@
                     <td class="auto-style20"></td>
                     <td class="auto-style6" style="font-size: x-large"></td>
                     <td class="auto-style31" style="font-size: x-large">&nbsp;</td>
-                    <td class="auto-style14"></td>
+                    <td class="auto-style46"></td>
                     <td class="auto-style40">&nbsp;</td>
                     <td class="auto-style5"></td>
                     <td class="auto-style5"></td>
@@ -230,7 +207,7 @@
                     <td class="auto-style21"></td>
                     <td class="auto-style10" style="font-weight: bold; font-size: large;">Agregar Sucursal</td>
                     <td class="auto-style32" style="font-weight: bold; font-size: large;">&nbsp;</td>
-                    <td class="auto-style15"></td>
+                    <td class="auto-style47"></td>
                     <td class="auto-style41">&nbsp;</td>
                     <td class="auto-style9"></td>
                     <td class="auto-style9"></td>
@@ -243,7 +220,9 @@
                     <td class="auto-style32">
                         <asp:TextBox ID="txtNombreSuc" runat="server" Height="16px" Width="240px"></asp:TextBox>
                     </td>
-                    <td class="auto-style15"></td>
+                    <td class="auto-style47">
+                        <asp:RequiredFieldValidator ID="rfvNombreSuc" runat="server" ControlToValidate="txtNombreSuc" ErrorMessage="Ingrese Nombre de Sucursal"></asp:RequiredFieldValidator>
+                    </td>
                     <td class="auto-style41"></td>
                     <td class="auto-style9"></td>
                     <td class="auto-style9"></td>
@@ -256,7 +235,9 @@
                     <td class="auto-style32">
                         <asp:TextBox ID="txtDescripcionSuc" runat="server" Height="45px" Width="240px"></asp:TextBox>
                     </td>
-                    <td class="auto-style17"></td>
+                    <td class="auto-style17">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDescripcionSuc" ErrorMessage="Ingrese una Descripcion"></asp:RequiredFieldValidator>
+                    </td>
                     <td class="auto-style42">&nbsp;</td>
                     <td class="auto-style7"></td>
                     <td class="auto-style7"></td>
@@ -270,7 +251,7 @@
                         <asp:DropDownList ID="ddlProvinciaSuc" runat="server" Height="16px" Width="240px">
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style15"></td>
+                    <td class="auto-style47"></td>
                     <td class="auto-style41"></td>
                     <td class="auto-style9"></td>
                     <td class="auto-style9"></td>
@@ -283,7 +264,22 @@
                     <td class="auto-style32">
                         <asp:TextBox ID="txtDireccionSuc" runat="server" Height="16px" Width="240px"></asp:TextBox>
                     </td>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style45">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccionSuc" ErrorMessage="Ingrese una Direccion"></asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style39">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style19">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style36">
+                        <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Agregar" />
+                    </td>
+                    <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -294,7 +290,7 @@
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style36">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -305,18 +301,7 @@
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style36">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
-                    <td class="auto-style39">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style19">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style36">&nbsp;</td>
-                    <td class="auto-style13">&nbsp;</td>
+                    <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
