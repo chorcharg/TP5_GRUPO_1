@@ -24,31 +24,31 @@ namespace TP5_GRUPO_1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control lbtnAgregarSuc.
+        /// Control HyperLinkAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnAgregarSuc;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkAgregar;
 
         /// <summary>
-        /// Control lbtnListadoSuc.
+        /// Control HyperLinkListado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnListadoSuc;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkListado;
 
         /// <summary>
-        /// Control lbtnEliminarSuc.
+        /// Control HyperLinkEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnEliminarSuc;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkEliminar;
 
         /// <summary>
         /// Control txtNombreSuc.

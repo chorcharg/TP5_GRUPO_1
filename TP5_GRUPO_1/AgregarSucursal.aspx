@@ -147,13 +147,13 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style33">
-                        <asp:LinkButton ID="lbtnAgregarSuc" runat="server">Agregar Sucursal</asp:LinkButton>
+                       <asp:HyperLink ID="HyperLinkAgregar" NavigateUrl="~/AgregarSucursal.aspx" runat="server" OnDataBinding="Page_Load">Agregar Sucursal</asp:HyperLink>
                     </td>
                     <td class="auto-style35">
-                        <asp:LinkButton ID="lbtnListadoSuc" runat="server">Listado de Sucursales</asp:LinkButton>
+                    <asp:HyperLink ID="HyperLinkListado" NavigateUrl="~/ListarSucursales.aspx" runat="server" OnDataBinding="Page_Load">Listado de Sucursales</asp:HyperLink>
                     </td>
                     <td class="auto-style33">
-                        <asp:LinkButton ID="lbtnEliminarSuc" runat="server">Eliminar Sucursal</asp:LinkButton>
+                      <asp:HyperLink ID="HyperLinkEliminar" NavigateUrl="~/EliminarSucursal.aspx" runat="server" OnDataBinding="Page_Load">Eliminar Sucursal</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

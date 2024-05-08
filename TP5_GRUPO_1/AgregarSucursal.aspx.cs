@@ -52,5 +52,10 @@ namespace TP5_GRUPO_1
             txtDescripcionSuc.Text = string.Empty;
             txtDireccionSuc.Text = string.Empty;
         }
+
+        protected void lbtnListadoSuc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
