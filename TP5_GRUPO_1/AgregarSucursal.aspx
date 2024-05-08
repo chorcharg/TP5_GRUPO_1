@@ -300,7 +300,9 @@
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style36">&nbsp;</td>
+                    <td class="auto-style36">
+                        <asp:Label ID="LbMensaje" runat="server" Text="Label"></asp:Label>
+                    </td>
                     <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
                     <td>&nbsp;</td>

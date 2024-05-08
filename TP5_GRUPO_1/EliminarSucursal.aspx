@@ -129,7 +129,9 @@
                     <td class="auto-style3">
                         <asp:Button ID="BtEliminar" runat="server" Text="Eliminar" />
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtId_Sucursal" ErrorMessage="El campo no puede estar en blanco" ValidationGroup="ValidacionSucursal">*</asp:RequiredFieldValidator>
+                    </td>
                     <td class="auto-style4">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -141,8 +143,12 @@
                     <td class="auto-style7"></td>
                     <td class="auto-style8"></td>
                     <td class="auto-style9"></td>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style10"></td>
+                    <td class="auto-style6">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TxtId_Sucursal" ErrorMessage="Ingrese Números" ValidationExpression="&quot;^\d+$&quot;" ValidationGroup="ValidacionSucursal">*</asp:RegularExpressionValidator>
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="ValidacionSucursal" />
+                    </td>
                     <td class="auto-style6"></td>
                     <td class="auto-style6"></td>
                     <td class="auto-style6"></td>

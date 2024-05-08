@@ -41,6 +41,7 @@ namespace TP5_GRUPO_1
                                          ddlProvinciaSuc.SelectedValue.ToString(),
                                          txtDireccionSuc.Text
                                          );
+            LbMensaje.Text = "La sucursal se ha agregado con éxito";
             limpiarCampos();
             
         }
