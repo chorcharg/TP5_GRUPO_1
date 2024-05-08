@@ -12,7 +12,7 @@ namespace TP5_GRUPO_1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        private string consultaSelect = "SELECT";
+
         SucursalesBD sucursalesDB = new SucursalesBD();
         
 
@@ -20,8 +20,14 @@ namespace TP5_GRUPO_1
         {
             if(!IsPostBack)
             {
-                //ddlProvinciaSuc.DataSource 
-                //ddlProvinciaSuc.DataBind();
+                DataSet provincias = sucursalesDB.ConsultaProvincias("provincias");
+                
+                ddlProvinciaSuc.DataSource = provincias.Tables["provincias"];
+                ddlProvinciaSuc.DataTextField = "DescripcionProvincia";
+                ddlProvinciaSuc.DataValueField = "Id_Provincia";
+                ddlProvinciaSuc.DataBind();
+
+
             }
         }
     }

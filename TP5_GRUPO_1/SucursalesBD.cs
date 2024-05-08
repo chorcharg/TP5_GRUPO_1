@@ -12,6 +12,13 @@ namespace TP5_GRUPO_1
 
         const string cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BDSucursales;Integrated Security=True";
 
+        public DataSet ConsultaProvincias(string nombreTabla)
+        {
+            string query = "SELECT * FROM Provincia";
+
+            return EjecutarConsulta(query,nombreTabla);
+        }
+
         //EJEMPLO DE USO EjecutarABM, INCOMPLETO (hay que construir la query
         public int agregarSucursal(string nombre, string descripcion, int idProvicia, string direccion)
         {
@@ -23,7 +30,7 @@ namespace TP5_GRUPO_1
 
 
         //EJEMPLO DE USO EjecutarConsulta
-        public DataSet ListarSucursales()
+        public DataSet ListarSucursales(string nombreTabla)
         {
             string query = "SELECT " +
                                 "SUC.Id_Sucursal, " +
@@ -34,10 +41,13 @@ namespace TP5_GRUPO_1
                           "FROM sucursal as SUC "+
                           "JOIN Provincia as PROV on SUC.Id_ProvinciaSucursal = PROV.Id_Provincia"; //delegamos en la DB traernos el nombre de la provincia (visto en laboratorio)
 
-            return EjecutarConsulta(query, "Sucursales"); //Devuelve un dataset
+            return EjecutarConsulta(query, nombreTabla); //Devuelve un dataset
         }
 
         //para querys SELECT
+
+
+
         private DataSet EjecutarConsulta(string consulta, string nombreTabla)
         {
             SqlConnection sqlConnection = new SqlConnection(cadenaConexion);
@@ -50,19 +60,6 @@ namespace TP5_GRUPO_1
             sqlConnection.Close();
 
             return resultados;
-        }
-
-
-        public DataSet ConsultaDatos (string consulta, string nombreTabla)
-        {
-            SqlConnection sqlConnection = new SqlConnection(cadenaConexion);
-            sqlConnection.Open();
-
-            SqlDataAdapter retornoDatos = new SqlDataAdapter(consulta, sqlConnection);
-
-            sqlConnection.Close();
-
-            return retornoDatos;
         }
 
         //para queyys de DELETE, UPDTE E INSERT
