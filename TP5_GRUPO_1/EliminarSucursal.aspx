@@ -127,7 +127,7 @@
                         <asp:TextBox ID="TxtId_Sucursal" runat="server"></asp:TextBox>
                     </td>
                     <td class="auto-style3">
-                        <asp:Button ID="BtEliminar" runat="server" Text="Eliminar" />
+                        <asp:Button ID="BtEliminar" runat="server" Text="Eliminar" OnClick="BtEliminar_Click" />
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtId_Sucursal" ErrorMessage="El campo no puede estar en blanco" ValidationGroup="ValidacionSucursal">*</asp:RequiredFieldValidator>
