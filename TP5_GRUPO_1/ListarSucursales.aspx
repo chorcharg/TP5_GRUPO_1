@@ -116,7 +116,7 @@
                     <asp:Button ID="BtFiltrar" runat="server" Text="Filtrar" OnClick="BtFiltrar_Click" ValidationGroup="vgFiltro" />
                 </td>
                 <td class="auto-style11">
-                    <asp:Button ID="BtMostrar" runat="server" Text="Mostrar Todo" />
+                    <asp:Button ID="BtMostrar" runat="server" Text="Mostrar Todo" OnClick="BtMostrar_Click" />
                 </td>
                 <td class="auto-style8"></td>
                 <td class="auto-style5"></td>

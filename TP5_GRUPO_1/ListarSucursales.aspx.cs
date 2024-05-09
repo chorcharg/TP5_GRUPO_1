@@ -39,5 +39,10 @@ namespace TP5_GRUPO_1
             GvListado.DataBind();
 
         }
+
+        protected void BtMostrar_Click(object sender, EventArgs e)
+        {
+            CargarSucursales();
+        }
     }
 }

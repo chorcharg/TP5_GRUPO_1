@@ -17,6 +17,19 @@ namespace TP5_GRUPO_1
 
         protected void BtEliminar_Click(object sender, EventArgs e)
         {
+            SucursalesBD sucursalesBD = new SucursalesBD();
+            int idSucursal = int.Parse(TxtId_Sucursal.Text);
+            
+            int filasAfectadas = sucursalesBD.EliminarSucursalPorId(idSucursal);
+            if (filasAfectadas > 0)
+            {
+                LbMensaje.Text = "La sucursal ha sido eliminada con exito";
+            }
+            else
+            {
+                LbMensaje.Text = "La sucursal no se pudo eliminar";
+            }
+            
 
         }
     }

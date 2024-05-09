@@ -88,6 +88,11 @@ namespace TP5_GRUPO_1
 
             return resultado;
         }
+        public int EliminarSucursalPorId(int idSucursal)
+        {
+             string query = "DELETE FROM Sucursal WHERE Id_Sucursal = " + idSucursal;
+             return EjecutarABM(query);
+        }
 
 
     }
