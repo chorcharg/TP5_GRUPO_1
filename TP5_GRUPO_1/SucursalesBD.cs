@@ -11,6 +11,30 @@ namespace TP5_GRUPO_1
     {
 
         const string cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BDSucursales;Integrated Security=True";
+        const string consultaBasica = "SELECT " +
+                                "SUC.Id_Sucursal, " +
+                                "SUC.NombreSucursal as Nombre, " +
+                                "SUC.DescripcionSucursal as Descripcion, " +
+                                "PROV.DescripcionProvincia, " +
+                                "SUC.DireccionSucursal as Direccion " +
+                          "FROM sucursal as SUC " +
+                          "JOIN Provincia as PROV on SUC.Id_ProvinciaSucursal = PROV.Id_Provincia"; //delegamos en la DB traernos el nombre de la provincia (visto en laboratorio)
+
+
+        public DataSet SucursalPorID(string id, string nombreTabla)
+        {
+
+            string query = consultaBasica + " WHERE SUC.Id_Sucursal = " + id;
+
+            return EjecutarConsulta(query, nombreTabla);
+        }
+
+        //EJEMPLO DE USO EjecutarConsulta
+        public DataSet ListarSucursales(string nombreTabla)
+        {
+
+            return EjecutarConsulta(consultaBasica, nombreTabla); //Devuelve un dataset
+        }
 
         public DataSet ConsultaProvincias(string nombreTabla)
         {
@@ -31,20 +55,7 @@ namespace TP5_GRUPO_1
         }
 
 
-        //EJEMPLO DE USO EjecutarConsulta
-        public DataSet ListarSucursales(string nombreTabla)
-        {
-            string query = "SELECT " +
-                                "SUC.Id_Sucursal, " +
-                                "SUC.NombreSucursal as Nombre, " +
-                                "SUC.DescripcionSucursal as Descripcion, " +
-                                "PROV.DescripcionProvincia, " +
-                                "SUC.DireccionSucursal as Direccion " +
-                          "FROM sucursal as SUC "+
-                          "JOIN Provincia as PROV on SUC.Id_ProvinciaSucursal = PROV.Id_Provincia"; //delegamos en la DB traernos el nombre de la provincia (visto en laboratorio)
-
-            return EjecutarConsulta(query, nombreTabla); //Devuelve un dataset
-        }
+ 
 
         //para querys SELECT
 

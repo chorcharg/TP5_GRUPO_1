@@ -26,5 +26,18 @@ namespace TP5_GRUPO_1
             GvListado.DataSource = sucursalesDataSet;
             GvListado.DataBind();
         }
+
+        protected void BtFiltrar_Click(object sender, EventArgs e)
+        {
+            if (TxtSucursal.Text.Trim() == "")
+            {
+                return;
+
+            }
+            DataSet sucursalDS  = sucursalesBD.SucursalPorID(TxtSucursal.Text, "sucursal");
+            GvListado.DataSource = sucursalDS;
+            GvListado.DataBind();
+
+        }
     }
 }
