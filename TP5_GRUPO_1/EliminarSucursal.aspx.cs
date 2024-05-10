@@ -10,6 +10,7 @@ namespace TP5_GRUPO_1
     
     public partial class WebForm3 : System.Web.UI.Page
     {
+        SucursalesBD sucursalesBD = new SucursalesBD();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,10 +18,9 @@ namespace TP5_GRUPO_1
 
         protected void BtEliminar_Click(object sender, EventArgs e)
         {
-            SucursalesBD sucursalesBD = new SucursalesBD();
-            int idSucursal = int.Parse(TxtId_Sucursal.Text);
             
-            int filasAfectadas = sucursalesBD.EliminarSucursalPorId(idSucursal);
+            int filasAfectadas = sucursalesBD.EliminarSucursalPorId(TxtId_Sucursal.Text.Trim());
+
             if (filasAfectadas > 0)
             {
                 LbMensaje.Text = "La sucursal ha sido eliminada con exito";
@@ -29,8 +29,6 @@ namespace TP5_GRUPO_1
             {
                 LbMensaje.Text = "La sucursal no se pudo eliminar";
             }
-            
-
         }
     }
 }

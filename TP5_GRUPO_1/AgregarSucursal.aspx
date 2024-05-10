@@ -89,9 +89,11 @@
         }
         .auto-style33 {
             width: 132px;
+            height: 23px;
         }
         .auto-style35 {
             width: 152px;
+            height: 23px;
         }
         .auto-style36 {
             width: 220px;
@@ -145,7 +147,7 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2"></td>
                     <td class="auto-style33">
                        <asp:HyperLink ID="HyperLinkAgregar" NavigateUrl="~/AgregarSucursal.aspx" runat="server" OnDataBinding="Page_Load">Agregar Sucursal</asp:HyperLink>
                     </td>
@@ -155,7 +157,7 @@
                     <td class="auto-style33">
                       <asp:HyperLink ID="HyperLinkEliminar" NavigateUrl="~/EliminarSucursal.aspx" runat="server" OnDataBinding="Page_Load">Eliminar Sucursal</asp:HyperLink>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2"></td>
                 </tr>
             </table>
             <table class="auto-style1">

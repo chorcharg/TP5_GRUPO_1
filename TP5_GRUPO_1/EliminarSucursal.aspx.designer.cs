@@ -51,6 +51,15 @@ namespace TP5_GRUPO_1
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkEliminar;
 
         /// <summary>
+        /// Control rfvIdSucursal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvIdSucursal;
+
+        /// <summary>
         /// Control TxtId_Sucursal.
         /// </summary>
         /// <remarks>
@@ -69,31 +78,13 @@ namespace TP5_GRUPO_1
         protected global::System.Web.UI.WebControls.Button BtEliminar;
 
         /// <summary>
-        /// Control RequiredFieldValidator1.
+        /// Control revEntero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
-        /// Control RegularExpressionValidator1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-
-        /// <summary>
-        /// Control ValidationSummary1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntero;
 
         /// <summary>
         /// Control LbMensaje.
