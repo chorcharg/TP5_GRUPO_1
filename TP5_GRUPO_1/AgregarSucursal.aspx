@@ -15,17 +15,17 @@
         }
         .auto-style3 {
             height: 23px;
-            width: 169px;
+            width: 189px;
         }
         .auto-style4 {
-            width: 169px;
+            width: 189px;
         }
         .auto-style5 {
             height: 10px;
         }
         .auto-style6 {
             height: 10px;
-            width: 169px;
+            width: 189px;
         }
         .auto-style7 {
             height: 32px;
@@ -35,7 +35,7 @@
         }
         .auto-style10 {
             height: 36px;
-            width: 169px;
+            width: 189px;
         }
         .auto-style17 {
             height: 32px;
@@ -66,7 +66,7 @@
         }
         .auto-style25 {
             height: 21px;
-            width: 169px;
+            width: 189px;
         }
         .auto-style27 {
             height: 21px;
@@ -185,7 +185,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style19">&nbsp;</td>
-                    <td class="auto-style4" style="font-size: xx-large; font-weight: bold;">GRUPO Nº</td>
+                    <td class="auto-style4" style="font-size: xx-large; font-weight: bold;">GRUPO Nº 1</td>
                     <td class="auto-style36" style="font-size: xx-large; font-weight: bold;">&nbsp;</td>
                     <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>
@@ -303,7 +303,7 @@
                     <td class="auto-style19">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style36">
-                        <asp:Label ID="LbMensaje" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="LbMensaje" runat="server"></asp:Label>
                     </td>
                     <td class="auto-style45">&nbsp;</td>
                     <td class="auto-style39">&nbsp;</td>

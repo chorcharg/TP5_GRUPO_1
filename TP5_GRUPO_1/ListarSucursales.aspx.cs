@@ -43,6 +43,7 @@ namespace TP5_GRUPO_1
         protected void BtMostrar_Click(object sender, EventArgs e)
         {
             CargarSucursales();
+            TxtSucursal.Text = "";
         }
     }
 }

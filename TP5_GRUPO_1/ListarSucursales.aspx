@@ -18,10 +18,6 @@
             height: 26px;
             width: 263px;
         }
-        .auto-style6 {
-            height: 26px;
-            width: 190px;
-        }
         .auto-style7 {
             width: 175px;
         }
@@ -80,6 +76,10 @@
             width: 233px;
             height: 23px;
         }
+        .auto-style39 {
+            height: 26px;
+            width: 195px;
+        }
     </style>
 </head>
 <body>
@@ -104,7 +104,7 @@
                 <table class="auto-style1">
             <tr>
                 <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style22">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style18">&nbsp;</td>
@@ -114,7 +114,7 @@
             </tr>
             <tr>
                 <td class="auto-style21"></td>
-                <td class="auto-style6">
+                <td class="auto-style39">
                     &nbsp;</td>
                 <td class="auto-style23"></td>
                 <td class="auto-style17">
@@ -127,7 +127,7 @@
             </tr>
             <tr>
                 <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style22">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style18">&nbsp;</td>
@@ -146,7 +146,7 @@
             </tr>
             <tr>
                 <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style22">
                     <asp:RequiredFieldValidator ID="rfvIdSucursal" runat="server" ControlToValidate="TxtSucursal" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="vgFiltro">*Campo obligatorio</asp:RequiredFieldValidator>
                 </td>
@@ -173,7 +173,7 @@
             </tr>
             <tr>
                 <td class="auto-style21"></td>
-                <td class="auto-style6"></td>
+                <td class="auto-style39"></td>
                 <td class="auto-style23">
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TxtSucursal" ErrorMessage="RegularExpressionValidator" ValidationExpression="^[0-9]+$" ValidationGroup="vgFiltro">Debe ingresar un ID valido (entero)</asp:RegularExpressionValidator>
                 </td>
@@ -185,30 +185,7 @@
             </tr>
             <tr>
                 <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
-                <td class="auto-style22">&nbsp;</td>
-                <td class="auto-style17">&nbsp;</td>
-                <td class="auto-style18">&nbsp;</td>
-                <td class="auto-style15">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style36">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">
-                    <asp:GridView ID="GvListado" runat="server">
-                    </asp:GridView>
-                </td>
-                <td class="auto-style22">&nbsp;</td>
-                <td class="auto-style17">&nbsp;</td>
-                <td class="auto-style18">&nbsp;</td>
-                <td class="auto-style15">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style36">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style20">&nbsp;</td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style39">&nbsp;</td>
                 <td class="auto-style22">&nbsp;</td>
                 <td class="auto-style17">&nbsp;</td>
                 <td class="auto-style18">&nbsp;</td>
@@ -217,6 +194,8 @@
                 <td class="auto-style36">&nbsp;</td>
             </tr>
         </table>
+                    <asp:GridView ID="GvListado" runat="server" Width="991px">
+                    </asp:GridView>
     </form>
 </body>
 </html>
